@@ -1,0 +1,27 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: 'Barlow', sans-serif;
+}
+
+button {
+    font-family: 'Barlow', sans-serif;
+}
+
+.requirements {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    margin-top: -8px;
+    color: grey
+}
+
+::ng-deep mat-form-field {
+    background-color: white;
+    border-radius: 2px;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+    background-color: rgba(237, 237, 237, 0.594);
+}

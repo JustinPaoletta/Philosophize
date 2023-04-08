@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-label>Date</mat-label>
+    <mat-form-field style="font-family: 'Barlow', sans-serif;" appearance="outline">
+        <input matInput [matDatepicker]="picker" formControlName="date" />
+        <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-label>Journal Entry</mat-label>
+    <mat-form-field style="font-family: 'Barlow', sans-serif;" appearance="outline">
+        <textarea placeholder="What does this quote mean to you? ..." matInput formControlName="entry"
+            cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="10" cdkAutosizeMaxRows="10"
+            maxlength="5300"></textarea>
+    </mat-form-field>
+
+    <div class="requirements">
+        <div>
+            Min: 80
+        </div>
+        <div>
+            {{ ((characters | async) || '').length }} / 5300
+        </div>
+    </div>
+
+    <button [disabled]="form.invalid" mat-flat-button color="primary" type="submit">Save Entry</button>
+</form>

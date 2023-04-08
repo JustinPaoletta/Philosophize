@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Philosophize",
+  "description": "A philosophical journal",
+  "version": "1.0",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "main.js",
+        "polyfills.js",
+        "runtime.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

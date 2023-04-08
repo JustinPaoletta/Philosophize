@@ -1,0 +1,10 @@
+<div>
+    <div *ngIf="quote && !submitted">
+        <app-quote [quote]="quote"></app-quote>
+        <app-journal (newEntrySubmitted)="quoteSubmitted($event)" [quote]="quote"></app-journal>
+    </div>
+
+    <app-todays-submission-view *ngIf="submitted && this.quotesLength"></app-todays-submission-view>
+
+    <app-completed-journal-view *ngIf="!this.quotesLength"></app-completed-journal-view>
+</div>
