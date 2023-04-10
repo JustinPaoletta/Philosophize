@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 
-import { LocalStorageService } from '../utility/local.storage.service';
+import { LocalStorageService } from '../storage/local.storage.service';
 import { quotes } from './quotes';
 import { Quote } from './quote.model';
 

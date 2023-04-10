@@ -14,17 +14,18 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { JournalComponent } from './journal/journal.component';
 
-import { LocalStorageService } from './utility/local.storage.service';
-import { TodaysSubmissionViewComponent } from './todays-submission-view/todays-submission-view.component';
-import { CompletedJournalViewComponent } from './completed-journal-view/completed-journal-view.component';
+import { LocalStorageService } from './storage/local.storage.service';
+import { TodaysSubmissionViewComponent } from './main/submission-views/todays-submission-view/todays-submission-view.component';
+import { CompletedJournalViewComponent } from './main/submission-views/completed-journal-view/completed-journal-view.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteService } from './quote/quote.service';
 import { JournalServiceBase } from './journal/base.journal.service';
 import { PDFJournalService } from './journal/pdf.journal.service';
+import { MessageComponent } from './common/ui/message/message.component';
 
 @NgModule({
   declarations: [
-    AppComponent, QuoteComponent, MainComponent, JournalComponent, TodaysSubmissionViewComponent, CompletedJournalViewComponent
+    AppComponent, QuoteComponent, MainComponent, JournalComponent, TodaysSubmissionViewComponent, CompletedJournalViewComponent, MessageComponent
   ],
   imports: [
     BrowserModule,

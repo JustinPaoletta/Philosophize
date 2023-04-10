@@ -1,9 +1,9 @@
 import { inject, Injectable } from '@angular/core';
 import { jsPDF } from "jspdf";
 
-import { LocalStorageService } from '../utility/local.storage.service';
+import { LocalStorageService } from '../storage/local.storage.service';
 
-import { Submission } from '../utility/local.storage.service.model';
+import { Submission } from '../storage/local.storage.service.model';
 import { JournalEntry } from './journal.model';
 import { JournalServiceBase } from './base.journal.service';
 
@@ -17,7 +17,7 @@ export class PDFJournalService implements JournalServiceBase {
     constructor() { }
 
     downloadEntry(formValue: JournalEntry): void {
-        console.log('Test to make sure its got the latest code');
+        console.log('Test to make sure it has the latest code');
         // Download pdf of Entry
         const doc = new jsPDF();
 

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, inject, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { LocalStorageService } from '../utility/local.storage.service';
+import { LocalStorageService } from '../storage/local.storage.service';
 import { Observable } from 'rxjs';
 import { JournalEntryGroup, JournalEntry } from './journal.model';
 import { Quote } from '../quote/quote.model';

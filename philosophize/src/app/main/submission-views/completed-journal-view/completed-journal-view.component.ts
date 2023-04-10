@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { JournalServiceBase } from '../journal/base.journal.service';
+import { JournalServiceBase } from '../../../journal/base.journal.service';
 
 @Component({
   selector: 'app-completed-journal-view',

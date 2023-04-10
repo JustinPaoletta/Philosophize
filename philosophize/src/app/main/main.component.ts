@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 
-import { LocalStorageService } from '../utility/local.storage.service';
+import { LocalStorageService } from '../storage/local.storage.service';
 
 import { Quote } from '../quote/quote.model';
 import { QuoteService } from '../quote/quote.service';
