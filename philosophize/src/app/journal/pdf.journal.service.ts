@@ -17,7 +17,7 @@ export class PDFJournalService implements JournalServiceBase {
     constructor() { }
 
     downloadEntry(formValue: JournalEntry): void {
-        console.log('Test to make sure it has the latest code');
+        console.log('Test to make sure latest code');
         // Download pdf of Entry
         const doc = new jsPDF();
 
@@ -45,7 +45,7 @@ export class PDFJournalService implements JournalServiceBase {
 
         const fullJournal = submissions.map((submission: Submission) => {
             const quote = doc.splitTextToSize(submission.entry.quote.text + " - " + submission.entry.quote.speaker, 330);
-            const entry = doc.splitTextToSize(submission.entry.entry, 330);
+            const entry = doc.splitTextToSize(submission.entry.userText, 330);
             return [
                 submission.date,
                 "",

@@ -4,7 +4,7 @@ import { Quote } from "../quote/quote.model";
 export interface JournalEntryGroup {
     date: FormControl<Date>;
     quote: FormControl<Quote>;
-    entry: FormControl<string>;
+    userText: FormControl<string>;
 }
 
 export interface JournalEntry {

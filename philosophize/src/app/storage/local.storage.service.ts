@@ -34,8 +34,11 @@ export class LocalStorageService {
         localStorage.removeItem('submitted');
     }
 
-    setTodaysInfo(index: string): void {
+    setTodaysDate(): void {
         localStorage.setItem('today', new Date().toLocaleDateString());
+    }
+
+    setTodaysIndex(index: string): void {
         localStorage.setItem('todaysIndex', index);
     }
 
@@ -53,9 +56,7 @@ export class LocalStorageService {
 
     getSubmissions(): Submission[] {
         return JSON.parse(localStorage.getItem('submissions')).map((submission: UnparsedSubmission) => {
-            console.log(JSON.parse(submission.entry))
             return { ...submission, entry: JSON.parse(submission.entry) }
         })
     }
-
 }

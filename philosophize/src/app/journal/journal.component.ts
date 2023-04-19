@@ -30,10 +30,10 @@ export class JournalComponent implements OnInit {
     this.form = new FormGroup<JournalEntryGroup>({
       date: new FormControl<Date>({ value: new Date(), disabled: true }),
       quote: new FormControl<Quote>(this.quote),
-      entry: new FormControl<string>('', [Validators.required, Validators.minLength(80), Validators.maxLength(5300)])
+      userText: new FormControl<string>('', [Validators.required, Validators.minLength(80), Validators.maxLength(5300)])
     });
 
-    this.characters = this.form.get('entry').valueChanges;
+    this.characters = this.form.get('userText').valueChanges;
   }
 
   onSubmit(): void {

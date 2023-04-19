@@ -28,7 +28,8 @@ export class QuoteService {
 
   configureDate(): void {
     if (this.localStorageService.isNewDay()) {
-      this.localStorageService.setTodaysInfo(Math.floor(Math.random() * this.localStorageService.getQuotes().length).toString());
+      this.localStorageService.setTodaysIndex(Math.floor(Math.random() * this.localStorageService.getQuotes().length).toString());
+      this.localStorageService.setTodaysDate();
       this.localStorageService.removeSubmittedStatus();
     }
   }

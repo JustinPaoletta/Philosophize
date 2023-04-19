@@ -8,7 +8,7 @@ export interface UnparsedSubmission {
 export interface Submission {
     date: string;
     entry: {
-        entry: string;
+        userText: string;
         quote: Quote;
     };
 }
