@@ -22,7 +22,7 @@ export class PDFJournalService implements JournalServiceBase {
         const doc = new jsPDF();
 
         const quote = doc.splitTextToSize(formValue.quote.text + " - " + formValue.quote.speaker, 330);
-        const entry = doc.splitTextToSize(formValue.entry, 330);
+        const entry = doc.splitTextToSize(formValue.userText, 330);
 
         doc.setFontSize(10);
         doc.setFont('Times');

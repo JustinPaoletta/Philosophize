@@ -10,5 +10,5 @@ export interface JournalEntryGroup {
 export interface JournalEntry {
     date: Date;
     quote: Quote;
-    entry: string;
+    userText: string;
 }
